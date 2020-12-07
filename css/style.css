@@ -41,25 +41,41 @@ section div h1 {
   height: 50%;
   position: absolute;
   bottom: 20%;
-  left: 15%;
+  left: 13%;
   opacity: 0;
 }
 #mainhome .main-txt h1 {
   padding-bottom: 24px;
   font-family: 'Oswald', serif ;
+  font-size: 60px;
 }
-#mainhome .main-txt p {
+#mainhome .main-txt .sub-text{
+  width: 70%;
+  padding-bottom: 36px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ccc;
+}
+
+
+#mainhome .main-txt .desc-text {
   font-size: 15px;
   color: #aaa;
   font-family: 'Roboto', sans-serif;
   width: 70%;
   line-height: 1.8;
 }
+
+
+
 #mainhome .main-txt.action {
   opacity: 1;
   bottom: 30%;
   transition: 0.5s 0.8s;
 }
+
+
+
 #mainhome .bg-move {
   position: absolute;
   top: 0;
@@ -370,7 +386,7 @@ section#information > div {
 
 
 #activity .bg_illust.action {
-  clip-path: circle(280px at 50% 50%);
+  clip-path: circle(42% at 50% 50%);
 }
 #activity .activ-text {
   position: absolute;
@@ -410,15 +426,107 @@ section#information > div {
 #activity .activ-menu .activ-list:not(:first-child) {
   margin-left: 10px;
 }
+/************* end page *****************/
+
+#end .end-inner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+#end.active .end-inner #thank-text{
+  padding: 0 12%;
+  width: 76%;
+  height: 400px;
+  stroke: #444;
+  stroke-width: 1.5px;
+  fill: transparent;
+  animation: fill .6s ease-in forwards 3s;
+  animation-play-state: running;
+}
+
+#end .end-inner #thank-text{
+  animation-play-state: paused;
+}
+#end.active .end-inner #thank-text .st0{
+  animation-play-state: paused;
+}
+
+#end.active .end-inner #thank-text .st0:nth-child(1){
+  stroke-dasharray: 305;
+  stroke-dashoffset: 305;
+  animation: drawing 2s  forwards linear 1.25s;
+  animation-play-state: running;
+}
+
+#end.active .end-inner #thank-text .st0:nth-child(2){
+  stroke-dasharray: 428;
+  stroke-dashoffset: 428;
+  animation: drawing 2s  forwards linear 1.35s;
+  animation-play-state: running;
+}
+
+#end.active .end-inner #thank-text .st0:nth-child(3){
+  stroke-dasharray: 416;
+  stroke-dashoffset: 416;
+  animation: drawing 2s  forwards linear 1.35s;
+  animation-play-state: running;
+}
+
+#end.active .end-inner #thank-text .st0:nth-child(4){
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: drawing 2s  forwards linear 1.45s;
+  animation-play-state: running;
+}
+
+#end.active .end-inner #thank-text .st0:nth-child(5){
+  stroke-dasharray: 476;
+  stroke-dashoffset: 476;
+  animation: drawing 2s  forwards linear 1.55s;
+  animation-play-state: running;
+}
+
+#end.active .end-inner #thank-text .st0:nth-child(6){
+  stroke-dasharray: 309;
+  stroke-dashoffset: 309;
+  animation: drawing 2s  forwards linear 1.65s;
+  animation-play-state: running;
+}
+
+#end.active .end-inner #thank-text .st0:nth-child(7){
+  stroke-dasharray: 411;
+  stroke-dashoffset: 411;
+  animation: drawing 2s  forwards linear 1.75s;
+  animation-play-state: running;
+}
+#end.active .end-inner #thank-text .st0:nth-child(8){
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: drawing 2s  forwards linear 1.85s;
+  animation-play-state: running;
+}
+
+@keyframes drawing{
+  to{stroke-dashoffset: 0;}
+}
+@keyframes fill{
+  from{fill:transparent}
+  to{fill:#000}
+}
 
 
+
+
+
+/************* header *****************/
 #subject{
   position: fixed;
   top: 0; left: 50%;
   transform: translateX(-50%);
   padding: 0 5%;
   width: 100%;
-  margin-top: 2%;
+  margin-top: 1.5%;
   display: flex;
   align-items: center;
  
@@ -445,56 +553,10 @@ section#information > div {
 }
 
 
-/************* food page *****************/
-#food .box-wrap {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  perspective: 600px;
+
+
+
+
+@media screen and (max-width:1240px){
+  
 }
-#food .box-wrap .box {
-  position: relative;
-  width: 210px;
-  height: 250px;
-  margin: 0 20px;
-  transform: rotateY(0deg);
-  transition: 0.7s;
-  transform-style: preserve-3d;
-  bottom: -80px;
-  opacity: 0;
-}
-#food .box-wrap .box .box-face {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  color: white;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-#food .box-wrap .box .box-front {
-  z-index: 1;
-}
-#food .box-wrap .box .box-front img {
-  width: 100%;
-}
-#food .box-wrap .box .box-back {
-  background: red;
-  transform: rotateY(180deg);
-}
-#food .box-wrap .box:hover {
-  transform: rotateY(180deg);
-}
-#food .box-wrap .box.action {
-  bottom: 0px;
-  opacity: 1;
-}
-/************* end page *****************/

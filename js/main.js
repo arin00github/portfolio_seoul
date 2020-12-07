@@ -73,6 +73,13 @@ $('#container').fullpage({
         }else{
             $('.bg_illust').removeClass('action')
         }
+
+        if(origin === 'endPage'){
+            $($title).text('')
+            $('#end').addClass('active')
+        }else{
+            $('#end').removeClass('active')
+        }
     },
     
 
@@ -152,4 +159,12 @@ $('.activ-list').click(function(){
        
 })
 
-               
+
+/// Endsection svg
+
+const svgText = document.querySelectorAll('#thank-text .st0')
+const dashValue = [305, 430, 420, 476, 310, 412, 400]
+for(let i=0; i < svgText.length ; i++){
+    console.log(`Letter ${i} is ${svgText[i].getTotalLength()}`)
+}
+
