@@ -34,7 +34,9 @@ $('#container').fullpage({
     anchors:['mainPage','introPage','inforPage','placePage','activPage','endPage'],
     //nevigation:true,
     afterLoad : function(origin, destination,direction){
+        const $title = $('#subject .page-title')
         if(origin === 'mainPage'){
+            $($title).text('')
             $('.main-txt').addClass('action');
             $('.bg-move').addClass('action')
             $('.cloud').addClass('action')
@@ -45,14 +47,19 @@ $('#container').fullpage({
         }
 
         if(origin === 'introPage'){
+            $($title).text('01.introduction')
             $('.intro-title, .intro-desc, #intro-box').addClass('action')
 
         }else{
             $('.intro-title, .intro-desc, #intro-box').removeClass('action')
         }
+        if(origin === 'inforPage'){
+            $($title).text('02.information')
+        }
 
 
         if(origin === 'placePage'){
+            $($title).text('Where to Visit')
             $('#place-info').addClass('action');
             //$('#place-slider').delay(500).slick('slickPlay')
         }else{
@@ -61,6 +68,7 @@ $('#container').fullpage({
         }
 
         if(origin === 'activPage'){
+            $($title).text('What to Play')
             $('.bg_illust').addClass('action')
         }else{
             $('.bg_illust').removeClass('action')
@@ -108,51 +116,40 @@ const scrollBar = $('#scroll-bar');
 
 const activityData = [
     
-    {text : "The Han River is well equipped with public facilities including parks. You ca take a walk along the Han River and enjoy the scenery of Seoul."},
-    {text : "There are many stores that rent hanbok around the palace. Wearing hanbok will make good memories. Also, the entrance fee is free if you wear Hanbok and enter the palace."},
-    {text : "It will be a good experience to stay in a traditional Korean house, Hanok. You can stay in Hanok or experience Hanok Cafe."}
+    {   title : "01.At The Han River",
+        text : "The Han River is well equipped with public facilities including parks. You ca take a walk along the Han River and enjoy the scenery of Seoul."},
+    {
+        title : "02.Wearing Hanbok",
+        text : "There are many stores that rent Hanbok around the palace. Wearing hanbok will make good memories. Also, the entrance fee is free if you wear Hanbok and enter the palace."},
+    {
+        title : "03.Hanok Stay",
+        text : "It will be a good experience to stay in a traditional Korean house, Hanok. You can stay in Hanok or experience Hanok Cafe."}
 
 ]
 
 const activIllust = $('.bg_illust');
-const person = activIllust.find('.person').find('img');
 const textArea = $('.activ-text .desc')
+const textTitle = $('.activ-title')
+const illustArray = [
+    "../image/activity_day_bg_01.gif",
+    "../image/activity_day_bg_02.gif",
+    "../image/activity_day_bg_03.gif"
+]
+
+
 
 $('.activ-list').click(function(){
-        let idxNumber = $(this).index() //인덱스 번호
-        activIllust.removeClass('action');
-        //console.log(that)
+    let idxNumber = $(this).index() //인덱스 번호
+    console.log(idxNumber);
+    activIllust.removeClass('action');
+    
         
-        let listUrl =  $(this).find('img').attr('src');
-        let bgUrl = listUrl.replace('_day','_day_bg');
-        let objUrl = listUrl.replace('_day','_day_objs');
-        //console.log(fixedUrl);
-        activIllust.css({backgroundImage : `url(${bgUrl})`});
-        person.hide();
-        person.attr('src', objUrl);
-        setTimeout(function(){
-            person.show();
-        },1000)
-        if(idxNumber === 0){
-            textArea.text(activityData[0].text)
-            person.parent().css({
-                display:"block",
-                width:'30%', right:'60%', bottom:'10%'
-            })
-        }else if(idxNumber === 1){
-            textArea.text(activityData[1].text)
-            person.parent().css({
-                display:"block",
-                width:'23%', right:'24%', bottom:'25%'
-            })
-        }else if(idxNumber === 2){
-            textArea.text(activityData[2].text)
-            person.parent().css({
-                display : "none"
-            })
-        }
-        activIllust.addClass('action');
-        //person.remove('.person')
+    activIllust.css({backgroundImage : `url(${illustArray[idxNumber]})`});
+    textTitle.text(activityData[idxNumber].title);
+    textArea.text(activityData[idxNumber].text);
+       
+    activIllust.addClass('action');
+       
 })
 
                

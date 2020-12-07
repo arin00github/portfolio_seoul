@@ -1,33 +1,23 @@
 /** Paste your SASS/SCSS/LESS code here */
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Lato:wght@300;400;700;900&family=Merriweather:wght@400;700;900&family=Mukta:wght@300;400;500;600;700&family=Oswald:wght@300;400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Black+Han+Sans&family=Yeseva+One&display=swap');
   /*  'Oswald', serif   */
   /*  'Mukta', sans-serif   */
   /*  'Lato', sans-serif   */
   /*   'Ubuntu', serif   */
   /*  'Roboto', sans-serif   */
+  /*  'Black Han Sans', sans-serif;   */
+  /*  'Alfa Slab One', cursive;   */
+  /*  'Yeseva One', cursive   */
  
 html {
-  font-family: 'Lato', roboto, sans-serif;
+  font-family: roboto, sans-serif;
 }
 
 body{
   min-width: 1024px;
 }
-#menu {
-  position: fixed;
-  right: 5%;
-  top: 3%;
-  display: flex;
-}
-#menu li {
-  margin: 0 10px;
-}
-#menu li a {
-  color: #aaa;
-}
-#menu li.active a {
-  color: black;
-}
+
 #container {
   width: 100%;
 }
@@ -133,7 +123,6 @@ section div h1 {
 #intro .main-txt-01 .intro-title {
   font-size: 48px;
   color: black;
-  font-family: 'Lato', sans-serif;
   text-transform: uppercase;
   font-weight: bold;
   text-transform: none;
@@ -147,7 +136,6 @@ section div h1 {
   padding-bottom: 18px;
   font-size: 15px;
   color: #aaa;
-  font-family: 'Roboto', sans-serif;
   opacity: 0;
   transform: translateY(80%);
   transition: 0.4s 0.3s;
@@ -248,7 +236,6 @@ section div h1 {
 #information #infor-slider .unit .unit-box {
   font-size: 15px;
   color: #aaa;
-  font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   color: black;
   padding: 12px;
@@ -288,7 +275,6 @@ section#information > div {
 #place #place-info h4 {
   font-size: 48px;
   color: black;
-  font-family: 'Lato', sans-serif;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 36px;
@@ -297,7 +283,6 @@ section#information > div {
 #place #place-info .desc {
   font-size: 15px;
   color: #aaa;
-  font-family: 'Roboto', sans-serif;
 }
 #place #place-info.action {
   opacity: 1;
@@ -364,11 +349,12 @@ section#information > div {
 /************* activity page *****************/
 #activity .bg_illust {
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  background-image: url(../image/activity_day_bg_02.png);
+  right: 5%;
+  bottom: 0;
+  width: 44%;
+  height: calc(100% - 120px);
+  background-image: url(../image/activity_day_bg_01.gif);
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   clip-path: circle(30px at 50% 50%);
@@ -381,52 +367,21 @@ section#information > div {
   left: 0;
   width: 100%;
 }
-#activity .bg_illust .person {
-  position: absolute;
-  width: 23%;
-  height: 40%;
-  right: 24%;
-  bottom: 25%;
-  transform-origin: 50% 50%;
-  animation: move 2s linear infinite;
-}
-#activity .bg_illust .person .main-obj {
-  top: 0;
-  position: absolute;
-  width: 100%;
-  height: auto;
-}
-@keyframes move {
-  0% {
-    transform: rotate(0deg);
-  }
-  40% {
-    transform: rotate(-10deg);
-  }
-  60% {
-    transform: rotate(5deg);
-  }
-  80% {
-    transform: rotate(-5deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
+
+
 #activity .bg_illust.action {
-  clip-path: circle(660px at 50% 50%);
+  clip-path: circle(280px at 50% 50%);
 }
 #activity .activ-text {
   position: absolute;
-  right: 13%;
-  top: 20%;
+  left: 13%;
+  top: 30%;
   width: 30%;
   padding: 10px 0;
 }
 #activity .activ-text .activ-title {
   font-size: 48px;
   color: black;
-  font-family: 'Lato', sans-serif;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 38px;
@@ -434,13 +389,12 @@ section#information > div {
 #activity .activ-text .desc {
   font-size: 15px;
   color: #aaa;
-  font-family: 'Roboto', sans-serif;
   padding-top: 24px;
 }
 #activity .activ-menu {
   position: absolute;
   bottom: 24%;
-  right: 10%;
+  left: 13%;
   display: flex;
 }
 #activity .activ-menu .activ-list {
@@ -456,6 +410,41 @@ section#information > div {
 #activity .activ-menu .activ-list:not(:first-child) {
   margin-left: 10px;
 }
+
+
+#subject{
+  position: fixed;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  padding: 0 5%;
+  width: 100%;
+  margin-top: 2%;
+  display: flex;
+  align-items: center;
+ 
+}
+#subject .page-title{
+  text-transform: uppercase;
+  font-size: 60px;
+  font-family: 'Oswald', serif  ;
+  color: #ececec;
+}
+
+#subject #menu {
+  display: flex;
+  margin-left: auto;
+}
+#subject #menu li {
+  margin: 0 10px;
+}
+#subject #menu li a {
+  color: #aaa;
+}
+#subject #menu li.active a {
+  color: black;
+}
+
+
 /************* food page *****************/
 #food .box-wrap {
   width: 100%;
