@@ -1,0 +1,511 @@
+/** Paste your SASS/SCSS/LESS code here */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Lato:wght@300;400;700;900&family=Merriweather:wght@400;700;900&family=Mukta:wght@300;400;500;600;700&family=Oswald:wght@300;400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+  /*  'Oswald', serif   */
+  /*  'Mukta', sans-serif   */
+  /*  'Lato', sans-serif   */
+  /*   'Ubuntu', serif   */
+  /*  'Roboto', sans-serif   */
+ 
+html {
+  font-family: 'Lato', roboto, sans-serif;
+}
+
+body{
+  min-width: 1024px;
+}
+#menu {
+  position: fixed;
+  right: 5%;
+  top: 3%;
+  display: flex;
+}
+#menu li {
+  margin: 0 10px;
+}
+#menu li a {
+  color: #aaa;
+}
+#menu li.active a {
+  color: black;
+}
+#container {
+  width: 100%;
+}
+#container > section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+#container > section > div {
+  width: 40%;
+  height: 500px;
+  overflow: hidden;
+}
+section div h1 {
+  font-size: 100px;
+  text-transform: uppercase;
+}
+/************* mainhome *************************/
+#mainhome .main-txt {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  bottom: 20%;
+  left: 15%;
+  opacity: 0;
+}
+#mainhome .main-txt h1 {
+  padding-bottom: 24px;
+  font-family: 'Oswald', serif ;
+}
+#mainhome .main-txt p {
+  font-size: 15px;
+  color: #aaa;
+  font-family: 'Roboto', sans-serif;
+  width: 70%;
+  line-height: 1.8;
+}
+#mainhome .main-txt.action {
+  opacity: 1;
+  bottom: 30%;
+  transition: 0.5s 0.8s;
+}
+#mainhome .bg-move {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../image/main.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  clip-path: circle(10px at 10% 50%);
+}
+#mainhome .bg-move.action {
+  transition: 0.5s 0.3s;
+  clip-path: circle(280px at 73% 50%);
+}
+#mainhome .cloud {
+  position: absolute;
+  width: 140px;
+  height: 80px;
+  opacity: 0;
+}
+#mainhome .cloud.action {
+  opacity: 1;
+  transition: opacity 0.2s 0.8s;
+  right: -20%;
+  animation: cloudmove 24s linear infinite;
+  animation-delay: 1s;
+}
+#mainhome .cloud.action img {
+  width: 100%;
+}
+#mainhome .cloud.cloud01 {
+  top: 10%;
+  animation-delay: 1s;
+}
+#mainhome .cloud.cloud02 {
+  top: 70%;
+  animation-delay: 4.5s;
+}
+#mainhome .cloud.cloud03 {
+  top: 50%;
+  animation-delay: 8s;
+}
+@keyframes cloudmove {
+  0% {
+    right: -180px;
+  }
+  100% {
+    right: calc(100% + 180px);
+  }
+}
+/************* intro page *****************/
+#intro .main-txt-01 {
+  width: 32%;
+  padding: 10px 0;
+  position: absolute;
+  bottom: 15%;
+  left: 20%;
+}
+#intro .main-txt-01 .intro-title {
+  font-size: 48px;
+  color: black;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-transform: none;
+  font-size: 32px;
+  padding-bottom: 18px;
+  opacity: 0;
+  transition: 0.4s 0.2s;
+  transform: translateY(80%);
+}
+#intro .main-txt-01 .intro-desc {
+  padding-bottom: 18px;
+  font-size: 15px;
+  color: #aaa;
+  font-family: 'Roboto', sans-serif;
+  opacity: 0;
+  transform: translateY(80%);
+  transition: 0.4s 0.3s;
+}
+#intro .main-txt-01 .intro-desc.action,
+#intro .main-txt-01 .intro-title.action {
+  opacity: 1;
+  transform: translateY(0%);
+}
+#intro .main-txt-01 #intro-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: 0.4s 0.45s;
+  opacity: 0;
+  transform: translateY(40%);
+}
+#intro .main-txt-01 #intro-box .box-list {
+  background: #F6F6F6;
+  width: 48%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 24px 0;
+  border-radius: 12px;
+}
+#intro .main-txt-01 #intro-box .box-list p {
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  padding-bottom: 10px;
+  text-transform: capitalize;
+}
+#intro .main-txt-01 #intro-box .box-list div > span {
+  font-size: 48px;
+  font-weight: bold;
+}
+#intro .main-txt-01 #intro-box .box-list:nth-child(1),
+#intro .main-txt-01 #intro-box .box-list:nth-child(2) {
+  margin-bottom: 12px;
+}
+#intro .main-txt-01 #intro-box.action {
+  opacity: 1;
+  transform: translateY(0%);
+}
+#intro .intro-map {
+  width:30%;
+  height: 80%;
+  min-height: 450px;
+  position: absolute;
+  bottom: 8%;
+  right:15%;
+}
+#intro .intro-map img {
+  height: 100%;
+}
+
+#intro .intro-map .mapbtn{
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  width: 36px;
+  height: 36px;
+  font-size: 18px;
+  border: 1px solid #ddd;
+}
+#intro .intro-map .mapbtn.shrink{
+  top: 60px;
+}
+/************* information page *****************/
+#information {
+  width: 100%;
+  position: relative;
+}
+
+#information .infor-inner{
+  padding: 0 15%;
+  
+}
+
+#information #infor-slider .unit {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+}
+#information #infor-slider .unit h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #aaa;
+  font-size: 24px;
+  text-align: center;
+  padding-bottom: 18px;
+  height: auto;
+}
+#information #infor-slider .unit .unit-box {
+  font-size: 15px;
+  color: #aaa;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: black;
+  padding: 12px;
+  background: #F6F6F6;
+  border-radius: 12px;
+}
+#information #infor-slider .unit:not(:first-child) {
+  margin-left: 48px;
+}
+#information #infor-slider .unit-img {
+  margin-top: 18px;
+}
+#information #infor-slider .unit-img img {
+  display: block;
+  margin: 0 auto;
+  width: 68%;
+}
+section#information > div {
+  width: 100%;
+}
+/************* place page *****************/
+#place #placebtn {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 100px;
+  height: 30px;
+}
+#place #place-info {
+  position: absolute;
+  left: 9%;
+  top: 50%;
+  width: 20%;
+  opacity: 0;
+  transition: 0.3s 0.3s;
+}
+#place #place-info h4 {
+  font-size: 48px;
+  color: black;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 36px;
+  padding-bottom: 32px;
+}
+#place #place-info .desc {
+  font-size: 15px;
+  color: #aaa;
+  font-family: 'Roboto', sans-serif;
+}
+#place #place-info.action {
+  opacity: 1;
+  top: 30%;
+}
+#place #place-illust {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 85%;
+  bottom: 0;
+  overflow-x: scroll;
+  
+}
+#place #place-illust .place-bg {
+  position: relative;
+  width: 160%;
+  height: 260px;
+  background: #F2F7FC;
+  display: flex;
+  
+}
+#place #place-illust .place-unit:first-child{
+    margin-left: 200px;
+}
+
+#place #place-illust .place-unit{
+      margin: 0 20px;
+      max-width: 300px;
+      min-width: 280px;
+}
+#place #place-illust .place-unit .pl-unit-img{
+    height: 260px;
+}
+.place-unit .pl-unit-img img{
+    height: 100%;
+}
+#place #place-illust .place-unit .pl-desc{
+  margin-top: 48px;
+}
+
+#place #place-illust .place-unit .pl-desc .pl-text{
+    padding: 10px;
+    opacity: 0;
+}
+#place #place-illust .place-unit .pl-desc .pl-text.active{
+  opacity: 1;
+}
+
+.place-unit .pl-title{
+    margin-top: 16px;
+    margin-bottom: 24px;
+    text-align: center;
+    font-family: 'Oswald', serif;
+    color: #aaa;
+}
+.place-unit .pl-text{
+  color: #aaa;
+  padding: 10px;
+  border: 1px solid #aaa;
+}
+
+
+/************* activity page *****************/
+#activity .bg_illust {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-image: url(../image/activity_day_bg_02.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  clip-path: circle(30px at 50% 50%);
+  transition: 0.6s 0.2s;
+}
+#activity .bg_illust .main-bg {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+#activity .bg_illust .person {
+  position: absolute;
+  width: 23%;
+  height: 40%;
+  right: 24%;
+  bottom: 25%;
+  transform-origin: 50% 50%;
+  animation: move 2s linear infinite;
+}
+#activity .bg_illust .person .main-obj {
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
+@keyframes move {
+  0% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(5deg);
+  }
+  80% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+#activity .bg_illust.action {
+  clip-path: circle(660px at 50% 50%);
+}
+#activity .activ-text {
+  position: absolute;
+  right: 13%;
+  top: 20%;
+  width: 30%;
+  padding: 10px 0;
+}
+#activity .activ-text .activ-title {
+  font-size: 48px;
+  color: black;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 38px;
+}
+#activity .activ-text .desc {
+  font-size: 15px;
+  color: #aaa;
+  font-family: 'Roboto', sans-serif;
+  padding-top: 24px;
+}
+#activity .activ-menu {
+  position: absolute;
+  bottom: 24%;
+  right: 10%;
+  display: flex;
+}
+#activity .activ-menu .activ-list {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+#activity .activ-menu .activ-list img {
+  width: 100%;
+}
+#activity .activ-menu .activ-list:not(:first-child) {
+  margin-left: 10px;
+}
+/************* food page *****************/
+#food .box-wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 600px;
+}
+#food .box-wrap .box {
+  position: relative;
+  width: 210px;
+  height: 250px;
+  margin: 0 20px;
+  transform: rotateY(0deg);
+  transition: 0.7s;
+  transform-style: preserve-3d;
+  bottom: -80px;
+  opacity: 0;
+}
+#food .box-wrap .box .box-face {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  color: white;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+#food .box-wrap .box .box-front {
+  z-index: 1;
+}
+#food .box-wrap .box .box-front img {
+  width: 100%;
+}
+#food .box-wrap .box .box-back {
+  background: red;
+  transform: rotateY(180deg);
+}
+#food .box-wrap .box:hover {
+  transform: rotateY(180deg);
+}
+#food .box-wrap .box.action {
+  bottom: 0px;
+  opacity: 1;
+}
+/************* end page *****************/
