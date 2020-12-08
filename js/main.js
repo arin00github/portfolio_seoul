@@ -138,9 +138,9 @@ const activIllust = $('.bg_illust');
 const textArea = $('.activ-text .desc')
 const textTitle = $('.activ-title')
 const illustArray = [
-    "portfolio_seoul/image/activity_day_bg_01.gif",
-    "portfolio_seoul/image/activity_day_bg_02.gif",
-    "portfolio_seoul/image/activity_day_bg_03.gif"
+    "https://arin00github.github.io/portfolio_seoul/image/activity_day_bg_01.gif",
+    "https://arin00github.github.io/portfolio_seoul/image/activity_day_bg_02.gif",
+    "https://arin00github.github.io/portfolio_seoul/image/activity_day_bg_03.gif"
 ]
 
 
@@ -162,9 +162,9 @@ $('.activ-list').click(function(){
 
 /// Endsection svg
 
-const svgText = document.querySelectorAll('#thank-text .st0')
-const dashValue = [305, 430, 420, 476, 310, 412, 400]
-for(let i=0; i < svgText.length ; i++){
-    console.log(`Letter ${i} is ${svgText[i].getTotalLength()}`)
-}
+// const svgText = document.querySelectorAll('#thank-text .st0')
+// const dashValue = [305, 430, 420, 476, 310, 412, 400]
+// for(let i=0; i < svgText.length ; i++){
+//     console.log(`Letter ${i} is ${svgText[i].getTotalLength()}`)
+// }
 
