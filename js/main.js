@@ -138,9 +138,9 @@ const activIllust = $('.bg_illust');
 const textArea = $('.activ-text .desc')
 const textTitle = $('.activ-title')
 const illustArray = [
-    "../image/activity_day_bg_01.gif",
-    "../image/activity_day_bg_02.gif",
-    "../image/activity_day_bg_03.gif"
+    "/image/activity_day_bg_01.gif",
+    "/image/activity_day_bg_02.gif",
+    "/imae/activity_day_bg_03.gif"
 ]
 
 
