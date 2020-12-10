@@ -558,5 +558,17 @@ section#information > div {
 
 
 @media screen and (max-width:1240px){
-  
+  #mainhome .bg-move.action {
+    transition: 0.5s 0.3s;
+    clip-path: circle(240px at 73% 50%);
+  }
+
+  #mainhome .main-txt {
+    bottom: 20%;
+    left: 10%;
+  }
+
+  #mainhome .main-txt h1 {
+    font-size: 56px;
+  }
 }
