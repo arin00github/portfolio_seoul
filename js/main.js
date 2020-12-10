@@ -147,7 +147,7 @@ const illustArray = [
 
 $('.activ-list').click(function(){
     let idxNumber = $(this).index() //인덱스 번호
-    console.log(idxNumber);
+    //console.log(idxNumber);
     activIllust.removeClass('action');
     
         
